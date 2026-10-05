@@ -1,0 +1,37 @@
+.list {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  color: var(--text-primary);
+}
+
+.search {
+  display: grid;
+  gap: 8px;
+}
+
+.search label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.search input {
+  width: 100%;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  background: var(--foreground);
+  color: var(--text-primary);
+  font: inherit;
+}
+
+.search input:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+.count {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
