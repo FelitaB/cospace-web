@@ -1,12 +1,10 @@
-import BookingList from "../components/BookingList";
-import styles from "./page.module.css";
+import DashboardWorkspace from "../components/DashboardWorkspace";
+import BookingsDashboard from "../components/BookingsDashboard";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <BookingList />
-      </main>
-    </div>
+    <DashboardWorkspace>
+      <BookingsDashboard />
+    </DashboardWorkspace>
   );
 }
