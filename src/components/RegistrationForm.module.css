@@ -26,6 +26,16 @@
   font-weight: 600;
 }
 
+.errorSummary,
+.fieldError {
+  color: #a32121;
+  font-size: 13px;
+}
+
+.errorSummary {
+  font-weight: 600;
+}
+
 .field input {
   width: 100%;
   min-width: 0;
@@ -35,6 +45,10 @@
   background: var(--foreground);
   color: var(--text-primary);
   font: inherit;
+}
+
+.field input[aria-invalid="true"] {
+  border-color: #a32121;
 }
 
 .form button {
