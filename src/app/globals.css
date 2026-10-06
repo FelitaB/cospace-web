@@ -47,6 +47,44 @@ a {
   text-decoration: none;
 }
 
+.site-header {
+  width: 100%;
+  border-bottom: 1px solid #dedede;
+  background: var(--foreground);
+}
+
+.site-nav {
+  display: flex;
+  width: calc(100% - 32px);
+  max-width: 800px;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin: 0 auto;
+}
+
+.site-brand {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.site-nav-link {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.site-nav-link:hover {
+  background: var(--background);
+}
+
+.site-nav-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
 button,
 input,
 select,
