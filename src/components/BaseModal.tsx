@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import type { KeyboardEvent as ReactKeyboardEvent } from "react";
 import type { BookingCardProps } from "./BookingCard";
-import RegistrationForm from "./RegistrationForm";
+import CreateBookingForm from "./CreateBookingForm";
 import styles from "./BaseModal.module.css";
 
 interface BaseModalProps {
@@ -123,7 +123,7 @@ export default function BaseModal({
         >
           Close
         </button>
-        <RegistrationForm onAddBooking={onAddBooking} />
+        <CreateBookingForm onAddBooking={onAddBooking} />
       </div>
     </div>
   );

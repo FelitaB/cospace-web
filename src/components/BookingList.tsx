@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import BookingCard, { type BookingCardProps } from "./BookingCard";
-import RegistrationForm from "./RegistrationForm";
+import CreateBookingForm from "./CreateBookingForm";
 import styles from "./BookingList.module.css";
 
 interface DeskBooking extends BookingCardProps {
@@ -32,7 +32,7 @@ export default function BookingList() {
 
   return (
     <section className={styles.list} aria-label="Desk bookings">
-      <RegistrationForm onAddBooking={addBooking} />
+      <CreateBookingForm onAddBooking={addBooking} />
       <div className={styles.search}>
         <label htmlFor="booking-search">Search bookings</label>
         <input
