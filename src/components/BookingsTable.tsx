@@ -10,9 +10,13 @@ export interface BookingTableItem {
 
 interface BookingsTableProps {
   bookings: BookingTableItem[];
+  onDeleteBooking: (id: string) => void;
 }
 
-export default function BookingsTable({ bookings }: BookingsTableProps) {
+export default function BookingsTable({
+  bookings,
+  onDeleteBooking,
+}: BookingsTableProps) {
   return (
     <div className={styles.wrapper}>
       <table className={styles.table}>
@@ -23,6 +27,7 @@ export default function BookingsTable({ bookings }: BookingsTableProps) {
             <th scope="col">Floor</th>
             <th scope="col">Date</th>
             <th scope="col">Status</th>
+            <th scope="col"><span className={styles.visuallyHidden}>Actions</span></th>
           </tr>
         </thead>
         <tbody>
@@ -39,6 +44,16 @@ export default function BookingsTable({ bookings }: BookingsTableProps) {
                 >
                   {booking.active ? "Active" : "Inactive"}
                 </span>
+              </td>
+              <td>
+                <button
+                  className={styles.deleteButton}
+                  type="button"
+                  aria-label={`Delete booking for desk ${booking.desk}`}
+                  onClick={() => onDeleteBooking(booking.id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}

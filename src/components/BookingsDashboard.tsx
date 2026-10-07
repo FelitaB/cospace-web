@@ -21,7 +21,12 @@ export default function BookingsDashboard() {
       ...currentBookings,
       { ...booking, id: crypto.randomUUID() },
     ]);
-    setIsModalOpen(false);
+  }
+
+  function handleDeleteBooking(id: string) {
+    setBookings((currentBookings) =>
+      currentBookings.filter((booking) => booking.id !== id),
+    );
   }
 
   return (
@@ -42,7 +47,10 @@ export default function BookingsDashboard() {
       </header>
 
       <section id="bookings" aria-label="Desk bookings">
-        <BookingsTable bookings={bookings} />
+        <BookingsTable
+          bookings={bookings}
+          onDeleteBooking={handleDeleteBooking}
+        />
       </section>
 
       <BaseModal
